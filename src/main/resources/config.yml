@@ -1,0 +1,49 @@
+NO-PERMISSION: "&cYou don't have permission to execute this command."
+NO-CONSOLE: "&cThis command only be execute by players."
+PLAYER-NOT-FOUND: "&cPlayer '&f{player} &c' not found."
+
+STAFF:
+  STAFFMODE-JOIN: true
+  JOIN-MESSAGE:
+    ENABLE: true
+    MESSAGE: "&7(&bStaff&7) &b{staff} &fjoin the server."
+  QUIT-MESSAGE:
+    ENABLE: true
+    MESSAGE: "&7(&bStaff&7) &b{staff} &fleft the server."
+
+CHAT:
+  FROZEN: "&7(&cFreeze&7) &c{player}&7: &f{message}"
+  STAFFCHAT: "&7(&bStaffChat&7) &b{staff}&7: &f{message}"
+
+FREEZE-COMMAND:
+  FROZEN-MESSAGE:
+    - "&7&m-----------------------------"
+    - ""
+    - "&4&lYou has been frozen"
+    - "&cIf you logout, you will be banned!"
+    - "&ePlease download Teamspeak and join to"
+    - "&ets.example.net"
+    - ""
+    - "&7&m-----------------------------"
+  FROZEN-SELF: "&cYou can't freeze your self."
+  FROZEN-STAFF: "&cYou can't freeze a staff member."
+  FROZEN-PLAYER: "&6You has been frozen by &c{staff}&6."
+  FROZEN-PLAYER-STAFF: "&c{player} &6has been frozen by &c{staff}&6."
+  FROZEN-PLAYER-DISCONNECT: "&7(&cFreeze&7) &f{player} &cdisconnected while frozen."
+  UNFROZEN-PLAYER: "&6You has been unfrozen by &c{staff}&6."
+  UNFROZEN-PLAYER-STAFF: "&c{player} &6has been unfrozen by &c{staff}&6."
+
+STAFFCHAT-COMMAND:
+  NOT-STAFF: "&cYou're not a staff member."
+  ENABLE: "&6StaffChat has been &aenabled&6."
+  DISABLE: "&6StaffChat has been &cdisabled&6."
+
+STAFFMODE-COMMAND:
+  NOT-STAFF: "&cYou're not a staff member."
+  ENABLE: "&6StaffMode has been &aenabled&6."
+  DISABLE: "&6StaffMode has been &cdisabled&6."
+
+VANISH-COMMAND:
+  NOT-STAFF: "&cYou're not a staff member."
+  ENABLE: "&6StaffMode has been &aenabled&6."
+  DISABLE: "&6StaffMode has been &cdisabled&6."

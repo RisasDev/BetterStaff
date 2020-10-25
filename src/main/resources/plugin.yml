@@ -1,0 +1,17 @@
+main: dev.risas.betterstaff.BetterStaff
+name: BetterStaff
+version: 1.0-SNAPSHOT
+author: Risas
+commands:
+  betterstaff:
+    aliases: [bs, betters, bstaff]
+  freeze:
+    aliases: [ss]
+  staffmode:
+    aliases: [staff, smode, sm, mod]
+  stafflist:
+    aliases: [staffl, lstaff, sl]
+  staffchat:
+    aliases: [sc, staffc, schat]
+  vanish:
+    aliases: [v]
