@@ -4,6 +4,7 @@ import dev.risas.betterstaff.BetterStaff;
 import dev.risas.betterstaff.files.ConfigFile;
 import dev.risas.betterstaff.utilities.CC;
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -37,9 +38,13 @@ public class FreezeListener implements Listener {
     @EventHandler
     private void onFrozenMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
-
+        Location to = event.getTo();
+        Location from = event.getFrom();
         if (BetterStaff.getInstance().getFreezeManager().isFrozen(player)) {
             player.teleport(player.getLocation());
+            to.setX(from.getX());
+            to.setZ(from.getZ());
+            event.setTo(to);
         }
     }
 

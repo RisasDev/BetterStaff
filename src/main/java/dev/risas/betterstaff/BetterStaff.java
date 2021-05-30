@@ -9,14 +9,12 @@ import dev.risas.betterstaff.manager.InventoryManager;
 import dev.risas.betterstaff.manager.StaffManager;
 import dev.risas.betterstaff.manager.VanishManager;
 import dev.risas.betterstaff.utilities.CC;
-import dev.risas.betterstaff.utilities.Description;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter
 public class BetterStaff extends JavaPlugin {
-
     @Getter
     private static BetterStaff instance;
     private FreezeManager freezeManager;
@@ -32,13 +30,6 @@ public class BetterStaff extends JavaPlugin {
         this.loadListeners();
         this.loadManagers();
 
-        Bukkit.getConsoleSender().sendMessage(CC.translate("&7&m---*------[&r &aENABLE &7&m]------*---"));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(""));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(" &7\u25B6 &6Name&7: &f" + Description.getName()));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(" &7\u25B6 &6Author&7: &f" + Description.getAuthor()));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(" &7\u25B6 &6Version&7: &f" + Description.getVersion()));
-        Bukkit.getConsoleSender().sendMessage(CC.translate(""));
-        Bukkit.getConsoleSender().sendMessage(CC.translate("&7&m---*------[&r &aENABLE &7&m]------*---"));
     }
 
     @Override

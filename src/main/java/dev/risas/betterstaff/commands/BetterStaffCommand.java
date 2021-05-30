@@ -4,7 +4,6 @@ import dev.risas.betterstaff.BetterStaff;
 import dev.risas.betterstaff.files.ConfigFile;
 import dev.risas.betterstaff.files.StaffItemFile;
 import dev.risas.betterstaff.utilities.CC;
-import dev.risas.betterstaff.utilities.Description;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -61,16 +60,16 @@ public class BetterStaffCommand implements CommandExecutor {
     }
 
     private void getUsage(CommandSender sender, String label) {
-        sender.sendMessage(CC.translate("&7&m---*------[&r &6" + Description.getName() + " &7&m]------*---"));
+        sender.sendMessage(CC.translate("&7&m---*----------------------------------------------*---"));
         sender.sendMessage(CC.translate(""));
         sender.sendMessage(CC.translate(" &7\u25B6 &6/" + label + " help"));
         sender.sendMessage(CC.translate(" &7\u25B6 &6/" + label + " reload"));
         sender.sendMessage(CC.translate(""));
-        sender.sendMessage(CC.translate("&7&m---*------[&r &6" + Description.getVersion() + " &7&m]------*---"));
+        sender.sendMessage(CC.translate("&7&m---*----------------------------------------------*---"));
     }
 
     private void getHelp(CommandSender sender) {
-        sender.sendMessage(CC.translate("&7&m---*------[&r &6" + Description.getName() + " &7&m]------*---"));
+        sender.sendMessage(CC.translate("&7&m---*----------------------------------------------*---"));
         sender.sendMessage(CC.translate(""));
         sender.sendMessage(CC.translate(" &7\u25B6 &6/freeze <player> &e- &fFreeze a player."));
         sender.sendMessage(CC.translate(" &7\u25B6 &6/staffchat &e- &fToggle your staffchat."));
@@ -78,6 +77,6 @@ public class BetterStaffCommand implements CommandExecutor {
         sender.sendMessage(CC.translate(" &7\u25B6 &6/staffmode &e- &fToggle your staffmode."));
         sender.sendMessage(CC.translate(" &7\u25B6 &6/vanish &e- &fToggle your vanish."));
         sender.sendMessage(CC.translate(""));
-        sender.sendMessage(CC.translate("&7&m---*------[&r &6" + Description.getVersion() + " &7&m]------*---"));
+        sender.sendMessage(CC.translate("&7&m---*----------------------------------------------*---"));
     }
 }
