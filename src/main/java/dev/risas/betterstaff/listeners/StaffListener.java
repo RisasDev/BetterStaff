@@ -51,7 +51,8 @@ public class StaffListener implements Listener {
             if (BetterStaff.getInstance().getStaffManager().isStaff(player)){
                 DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
                 String message = BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK")
-                        .replace("{player}", player.getName());
+                        .replace("{player}", player.getName())
+                        .replace("{server}", player.getServer().getName());
                 wh.setContent(message);
                 try {
                     wh.execute();
@@ -80,6 +81,20 @@ public class StaffListener implements Listener {
         }
         if (BetterStaff.getInstance().getStaffManager().isStaffChat(player)) {
             BetterStaff.getInstance().getStaffManager().removeStaffChat(player);
+        }
+        if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
+            DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
+            String message = BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK")
+                    .replace("{player}", player.getName())
+                    .replace("{server}", player.getServer().getName());
+            wh.setContent(message);
+            try {
+                wh.execute();
+            } catch (MalformedURLException e) {
+                System.out.println("[BetterStaff] Invalid webhook URL");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 

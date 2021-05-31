@@ -8,11 +8,11 @@ STAFF:
   JOIN-MESSAGE:
     ENABLE: true
     MESSAGE: "&7(&bStaff&7) &b{staff} &fjoin the server."
-    WEBHOOK: "{player} ha entrado a joder"
+    WEBHOOK: "{player} ha empezado a moderar, su entrada ha sido a {server}"
   QUIT-MESSAGE:
     ENABLE: true
     MESSAGE: "&7(&bStaff&7) &b{staff} &fleft the server."
-    WEBHOOK: "test"
+    WEBHOOK: "{player} ha dejado de moderar, su salida ha sido de {server}"
 
 CHAT:
   FROZEN: "&7(&cFreeze&7) &c{player}&7: &f{message}"
