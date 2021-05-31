@@ -4,6 +4,7 @@ import dev.risas.betterstaff.BetterStaff;
 import dev.risas.betterstaff.files.ConfigFile;
 import dev.risas.betterstaff.files.StaffItemFile;
 import dev.risas.betterstaff.utilities.CC;
+import dev.risas.betterstaff.utilities.DiscordUtils;
 import dev.risas.betterstaff.utilities.StaffItems;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -22,6 +23,8 @@ import org.bukkit.event.player.*;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -44,6 +47,19 @@ public class StaffListener implements Listener {
             if (ConfigFile.getConfig().getBoolean("STAFF.JOIN-MESSAGE.ENABLE")) {
                 BetterStaff.getInstance().getStaffManager().sendMessageAllStaffs(ConfigFile.getConfig().getString("STAFF.JOIN-MESSAGE.MESSAGE")
                         .replace("{staff}", player.getName()));
+            }
+            if (BetterStaff.getInstance().getStaffManager().isStaff(player)){
+                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
+                String message = BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK")
+                        .replace("{player}", player.getName());
+                wh.setContent(message);
+                try {
+                    wh.execute();
+                } catch (MalformedURLException e) {
+                    System.out.println("[BetterStaff] Invalid webhook URL");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
@@ -81,13 +97,9 @@ public class StaffListener implements Listener {
 
     @EventHandler
     public void onStaffHit(EntityDamageByEntityEvent event) {
-        if (event.getEntity() instanceof Player && event.getDamager() instanceof Player) {
-
-            Player player = (Player) event.getDamager();
-
-            if (BetterStaff.getInstance().getStaffManager().isStaffMode(player)) {
-                event.setCancelled(true);
-            }
+        Player player = (Player) event.getDamager();
+        if (BetterStaff.getInstance().getStaffManager().isStaffMode(player)) {
+            event.setCancelled(true);
         }
     }
 

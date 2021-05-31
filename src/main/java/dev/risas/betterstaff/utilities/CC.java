@@ -1,8 +1,11 @@
 package dev.risas.betterstaff.utilities;
 
+import dev.risas.betterstaff.BetterStaff;
 import dev.risas.betterstaff.files.ConfigFile;
 import org.bukkit.ChatColor;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
 
