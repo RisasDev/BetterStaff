@@ -50,21 +50,23 @@ public class StaffListener implements Listener {
                 BetterStaff.getInstance().getStaffManager().sendMessageAllStaffs(ConfigFile.getConfig().getString("STAFF.JOIN-MESSAGE.MESSAGE")
                         .replace("{staff}", player.getName()));
             }
-            if (BetterStaff.getInstance().getStaffManager().isStaff(player)){
-                try{
-                    DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
-                    wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
-                    wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
-                    wh.setTts(false);
-                    wh.addEmbed(new DiscordUtils.EmbedObject()
-                            .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.TITLE"))
-                            .setColor(Color.RED)
-                            .addField("Staff:", player.getName(), true)
-                            .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.FIELD"))
-                            .setThumbnail("https://minotar.net/avatar/" + player.getName()));
-                    wh.execute();
-                } catch (IOException ioException) {
-                    ioException.printStackTrace();
+            if (BetterStaff.getInstance().getConfig().getBoolean("WEBHOOK.STATUS")){
+                if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
+                    try {
+                        DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
+                        wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
+                        wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
+                        wh.setTts(false);
+                        wh.addEmbed(new DiscordUtils.EmbedObject()
+                                .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.TITLE"))
+                                .setColor(Color.RED)
+                                .addField("Staff:", player.getName(), true)
+                                .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.FIELD"))
+                                .setThumbnail("https://minotar.net/avatar/" + player.getName()));
+                        wh.execute();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
                 }
             }
         }
@@ -87,21 +89,24 @@ public class StaffListener implements Listener {
         if (BetterStaff.getInstance().getStaffManager().isStaffChat(player)) {
             BetterStaff.getInstance().getStaffManager().removeStaffChat(player);
         }
-        if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
-            try{
-                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
-                wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
-                wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
-                wh.setTts(false);
-                wh.addEmbed(new DiscordUtils.EmbedObject()
-                        .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.TITLE"))
-                        .setColor(Color.RED)
-                        .addField("Staff:", player.getName(), true)
-                        .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.FIELD"))
-                        .setThumbnail("https://minotar.net/avatar/" + player.getName()));
-                wh.execute();
-            } catch (IOException ioException) {
-                ioException.printStackTrace();
+        if (BetterStaff.getInstance().getConfig().getBoolean("WEBHOOK.STATUS")){
+
+            if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
+                try{
+                    DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
+                    wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
+                    wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
+                    wh.setTts(false);
+                    wh.addEmbed(new DiscordUtils.EmbedObject()
+                            .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.TITLE"))
+                            .setColor(Color.RED)
+                            .addField("Staff:", player.getName(), true)
+                            .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.FIELD"))
+                            .setThumbnail("https://minotar.net/avatar/" + player.getName()));
+                    wh.execute();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                }
             }
         }
     }
