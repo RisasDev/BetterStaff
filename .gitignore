@@ -1,75 +1,113 @@
-# Cubre IDE de JetBrains: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm y Rider 
-# Referencia: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839 
+# User-specific stuff
+.idea/
 
-# Idea 
-. DS_Store 
-.idea 
+*.iml
+*.ipr
+*.iws
 
-# Cosas específicas del usuario 
-.idea / ** / workspace.xml 
-.idea / ** / tasks.xml 
-.idea / ** / use.statistics.xml 
-.idea / ** / dictionary 
-.idea / ** / estante 
+# IntelliJ
+out/
 
-# Archivos generados 
-.idea/ ** / contentModel.xml 
+# Compiled class file
+*.class
 
-# Archivos sensibles o de alta rotación 
-.idea / ** / dataSources /
- .idea / ** / dataSources.ids 
-.idea / ** / dataSources.local.xml 
-.idea / ** / sqlDataSources. xml 
-.idea / ** / dynamic.xml 
-.idea / ** / uiDesigner.xml 
-.idea / ** / dbnavigator.xml 
+# Log file
+*.log
 
-# Gradle 
-.idea / **/ gradle.xml 
-.idea / ** / libraries 
+# BlueJ files
+*.ctxt
 
-# Gradle y Maven con importación automática 
-# Cuando use Gradle o Maven con importación automática, debe excluir los archivos de módulo, 
-# ya que se volverán a crear y pueden causar pérdidas. Descomente si usa 
-# auto-import. 
-# .idea / artifacts 
-# .idea / compiler.xml 
-# .idea / jarRepositories.xml 
-# .idea / modules.xml 
-# .idea / *. iml 
-# .idea / modules 
-# * .iml 
-# * .ipr 
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
 
-# CMake 
-cmake- build- * / #
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
 
+*~
 
-Complemento de Mongo Explorer .idea / ** / mongoSettings.xml 
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
 
-# Formato de proyecto basado en archivos 
-* .iws 
+# KDE directory preferences
+.directory
 
-#
- Salida de IntelliJ / # mpeltonen / sbt-idea plugin .idea_modules / # JIRA plugin atlassian-ide-plugin.xml # Complemento cursivo de Clojure . idea / replstate.xml # Complemento de Crashlytics (para Android Studio e IntelliJ) com_crashlytics_export_strings.xml crashlytics.properties crashlytics-build.properties fabric.properties # Cliente de descanso basado en editor .idea
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
 
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
 
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
+# Icon must end with two \r
+Icon
 
+# Thumbnails
+._*
 
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
 
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
+# Dump file
+*.stackdump
 
+# Folder config file
+[Dd]esktop.ini
 
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
 
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
 
+# Windows shortcuts
+*.lnk
 
+target/
 
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
 
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.flattened-pom.xml
 
-
-/ httpRequests 
-
-# Android studio 3.1+ archivo de caché serializado 
-.idea / caches / build_file_checksums.ser
+# Common working directory
+run/
