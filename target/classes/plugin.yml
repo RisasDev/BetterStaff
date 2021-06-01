@@ -8,7 +8,7 @@ commands:
   freeze:
     aliases: [ss]
   staffmode:
-    aliases: [staff, smode, sm, mod]
+    aliases: [staff, smode, sm, mod, h]
   stafflist:
     aliases: [staffl, lstaff, sl]
   staffchat:

@@ -1,18 +1,24 @@
 NO-PERMISSION: "&cYou don't have permission to execute this command."
 NO-CONSOLE: "&cThis command only be execute by players."
 PLAYER-NOT-FOUND: "&cPlayer '&f{player} &c' not found."
-WEBHOOK: "https://discord.com/api/webhooks/848964720643539014/7UOFBWfzB_3HnAbhP0Tk-rNEMIoiXRzdxsDdQ3k6fEYeP_nkBW1Um3XD2zEQwI6uIP5g"
+WEBHOOK: "https://discord.com/api/webhooks/849303653512249405/nirmbGO-Be6TQVoPeH9PKEia9dJkCNwC9wzxOBtwqwOkz7BpAOPSlQ4MdgGGbi7DAPa0"
+USERNAME: "BetterStaff"
+IMAGE: ""
 
 STAFF:
   STAFFMODE-JOIN: true
   JOIN-MESSAGE:
     ENABLE: true
     MESSAGE: "&7(&bStaff&7) &b{staff} &fjoin the server."
-    WEBHOOK: "{player} ha empezado a moderar, su entrada ha sido a {server}"
+    WEBHOOK:
+      TITLE: "Staff Alert | BetterStaff"
+      FIELD: "A staff has just join to the server"
   QUIT-MESSAGE:
     ENABLE: true
     MESSAGE: "&7(&bStaff&7) &b{staff} &fleft the server."
-    WEBHOOK: "{player} ha dejado de moderar, su salida ha sido de {server}"
+    WEBHOOK:
+      TITLE: "Staff Alert | BetterStaff"
+      FIELD: "A staff has just leave to the server"
 
 CHAT:
   FROZEN: "&7(&cFreeze&7) &c{player}&7: &f{message}"

@@ -7,6 +7,7 @@ import dev.risas.betterstaff.utilities.CC;
 import dev.risas.betterstaff.utilities.DiscordUtils;
 import dev.risas.betterstaff.utilities.StaffItems;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
@@ -23,6 +24,7 @@ import org.bukkit.event.player.*;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
@@ -49,17 +51,20 @@ public class StaffListener implements Listener {
                         .replace("{staff}", player.getName()));
             }
             if (BetterStaff.getInstance().getStaffManager().isStaff(player)){
-                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
-                String message = BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK")
-                        .replace("{player}", player.getName())
-                        .replace("{server}", player.getServer().getName());
-                wh.setContent(message);
-                try {
+                try{
+                    DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
+                    wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("IMAGE"));
+                    wh.setUsername(BetterStaff.getInstance().getConfig().getString("USERNAME"));
+                    wh.setTts(false);
+                    wh.addEmbed(new DiscordUtils.EmbedObject()
+                            .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.TITLE"))
+                            .setColor(Color.RED)
+                            .addField("Staff:", player.getName(), true)
+                            .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.FIELD"))
+                            .setThumbnail("https://minotar.net/avatar/" + player.getName()));
                     wh.execute();
-                } catch (MalformedURLException e) {
-                    System.out.println("[BetterStaff] Invalid webhook URL");
-                } catch (IOException e) {
-                    e.printStackTrace();
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
                 }
             }
         }
@@ -83,17 +88,20 @@ public class StaffListener implements Listener {
             BetterStaff.getInstance().getStaffManager().removeStaffChat(player);
         }
         if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
-            DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
-            String message = BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK")
-                    .replace("{player}", player.getName())
-                    .replace("{server}", player.getServer().getName());
-            wh.setContent(message);
-            try {
+            try{
+                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
+                wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("IMAGE"));
+                wh.setUsername(BetterStaff.getInstance().getConfig().getString("USERNAME"));
+                wh.setTts(false);
+                wh.addEmbed(new DiscordUtils.EmbedObject()
+                        .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.TITLE"))
+                        .setColor(Color.RED)
+                        .addField("Staff:", player.getName(), true)
+                        .setDescription(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.FIELD"))
+                        .setThumbnail("https://minotar.net/avatar/" + player.getName()));
                 wh.execute();
-            } catch (MalformedURLException e) {
-                System.out.println("[BetterStaff] Invalid webhook URL");
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
             }
         }
     }
