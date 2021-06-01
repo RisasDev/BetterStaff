@@ -38,7 +38,7 @@ public class StaffListener implements Listener {
     }
 
     @EventHandler
-    private void onJoin(PlayerJoinEvent event) {
+    private void onStaffJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
         if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
@@ -73,7 +73,7 @@ public class StaffListener implements Listener {
     }
 
     @EventHandler
-    private void onQuit(PlayerQuitEvent event) {
+    private void onStaffQuit(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
         if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {

@@ -49,7 +49,7 @@ public class FreezeListener implements Listener {
     }
 
     @EventHandler
-    private void onStaffInventory(InventoryClickEvent event) {
+    private void onFreezeInventory(InventoryClickEvent event) {
         Player player = (Player) event.getWhoClicked();
 
         if (BetterStaff.getInstance().getFreezeManager().isFrozen(player)) {
