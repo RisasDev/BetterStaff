@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41ae57f4-4ae2-4da4-9330-59a31f3a1a48" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/BetterStaff.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BetterStaff.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +30,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="BetterStaff [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
@@ -62,6 +61,9 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,10 +90,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622480125683">
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622565614090">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1622480125683" />
+    <state x="137" y="24" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1622565614090" />
     <state x="413" y="116" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1622397254174">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -100,10 +102,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="325" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1622565154178" />
-    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1622565039662">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1622565569706">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1622565039662" />
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1622565569706" />
     <state width="1367" height="183" key="GridCell.Tab.0.bottom" timestamp="1622565178762">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -120,6 +122,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state width="1367" height="183" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1622565178762" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1622565626728">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1622565626728" />
     <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1622565162264">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
