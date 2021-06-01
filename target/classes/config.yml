@@ -2,6 +2,7 @@ NO-PERMISSION: "&cYou don't have permission to execute this command."
 NO-CONSOLE: "&cThis command only be execute by players."
 PLAYER-NOT-FOUND: "&cPlayer '&f{player} &c' not found."
 WEBHOOK:
+  STATUS: true
   LINK: ""
   USERNAME: "BetterStaff"
   IMAGE: ""
