@@ -1,9 +1,10 @@
 NO-PERMISSION: "&cYou don't have permission to execute this command."
 NO-CONSOLE: "&cThis command only be execute by players."
 PLAYER-NOT-FOUND: "&cPlayer '&f{player} &c' not found."
-WEBHOOK: "https://discord.com/api/webhooks/849303653512249405/nirmbGO-Be6TQVoPeH9PKEia9dJkCNwC9wzxOBtwqwOkz7BpAOPSlQ4MdgGGbi7DAPa0"
-USERNAME: "BetterStaff"
-IMAGE: ""
+WEBHOOK:
+  LINK: ""
+  USERNAME: "BetterStaff"
+  IMAGE: ""
 
 STAFF:
   STAFFMODE-JOIN: true

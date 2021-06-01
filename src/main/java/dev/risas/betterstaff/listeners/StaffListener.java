@@ -52,9 +52,9 @@ public class StaffListener implements Listener {
             }
             if (BetterStaff.getInstance().getStaffManager().isStaff(player)){
                 try{
-                    DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
-                    wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("IMAGE"));
-                    wh.setUsername(BetterStaff.getInstance().getConfig().getString("USERNAME"));
+                    DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
+                    wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
+                    wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
                     wh.setTts(false);
                     wh.addEmbed(new DiscordUtils.EmbedObject()
                             .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.JOIN-MESSAGE.WEBHOOK.TITLE"))
@@ -89,9 +89,9 @@ public class StaffListener implements Listener {
         }
         if (BetterStaff.getInstance().getStaffManager().isStaff(player)) {
             try{
-                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK"));
-                wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("IMAGE"));
-                wh.setUsername(BetterStaff.getInstance().getConfig().getString("USERNAME"));
+                DiscordUtils wh = new DiscordUtils(BetterStaff.getInstance().getConfig().getString("WEBHOOK.LINK"));
+                wh.setAvatarUrl(BetterStaff.getInstance().getConfig().getString("WEBHOOK.IMAGE"));
+                wh.setUsername(BetterStaff.getInstance().getConfig().getString("WEBHOOK.USERNAME"));
                 wh.setTts(false);
                 wh.addEmbed(new DiscordUtils.EmbedObject()
                         .setTitle(BetterStaff.getInstance().getConfig().getString("STAFF.QUIT-MESSAGE.WEBHOOK.TITLE"))
