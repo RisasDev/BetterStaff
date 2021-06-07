@@ -44,6 +44,7 @@ public class BetterStaffCommand implements CommandExecutor {
                 return true;
             }
 
+            BetterStaff.getInstance().reloadConfig();
             ConfigFile.getConfig().reload();
             StaffItemFile.getConfig().reload();
             for (Player online : Bukkit.getServer().getOnlinePlayers()) {

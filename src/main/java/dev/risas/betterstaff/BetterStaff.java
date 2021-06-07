@@ -3,14 +3,13 @@ package dev.risas.betterstaff;
 import dev.risas.betterstaff.commands.*;
 import dev.risas.betterstaff.listeners.ChatListener;
 import dev.risas.betterstaff.listeners.FreezeListener;
+import dev.risas.betterstaff.listeners.StaffItemListener;
 import dev.risas.betterstaff.listeners.StaffListener;
 import dev.risas.betterstaff.manager.FreezeManager;
 import dev.risas.betterstaff.manager.InventoryManager;
 import dev.risas.betterstaff.manager.StaffManager;
 import dev.risas.betterstaff.manager.VanishManager;
-import dev.risas.betterstaff.utilities.CC;
 import lombok.Getter;
-import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 @Getter
@@ -26,6 +25,8 @@ public class BetterStaff extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
+        saveDefaultConfig();
+        reloadConfig();
         this.loadCommands();
         this.loadListeners();
         this.loadManagers();
@@ -50,6 +51,7 @@ public class BetterStaff extends JavaPlugin {
         new ChatListener();
         new FreezeListener();
         new StaffListener();
+        new StaffItemListener();
     }
 
     private void loadManagers() {
