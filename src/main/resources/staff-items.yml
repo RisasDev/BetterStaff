@@ -12,6 +12,13 @@ INSPECTOR:
   NAME: "&6Inspector &7(Right Click)"
   SLOT: 1
 
+CLICK-COUNTS:
+  ENABLE: true
+  ITEM: "CLOCK"
+  DATA: 0
+  NAME: "&6Click Counter &7(Right Click)"
+  SLOT: 3
+
 WORLD-EDIT:
   ENABLE: true
   ITEM: "WOOD_AXE"

@@ -114,6 +114,9 @@ public class StaffManager {
         if (StaffItemFile.getConfig().getBoolean("WORLD-EDIT.ENABLE")) {
             player.getInventory().setItem(StaffItemFile.getConfig().getInt("WORLD-EDIT.SLOT"), StaffItems.getWorldEdit());
         }
+        if (StaffItemFile.getConfig().getBoolean("CLICK-COUNTS.ENABLE")) {
+            player.getInventory().setItem(StaffItemFile.getConfig().getInt("CLICK-COUNTS.SLOT"), StaffItems.getClickCounts());
+        }
         if (StaffItemFile.getConfig().getBoolean("FREEZE.ENABLE")) {
             player.getInventory().setItem(StaffItemFile.getConfig().getInt("FREEZE.SLOT"), StaffItems.getFreeze());
         }

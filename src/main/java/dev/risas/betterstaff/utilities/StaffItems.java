@@ -87,4 +87,13 @@ public class StaffItems {
         item.setItemMeta(meta);
         return item;
     }
+
+    public static ItemStack getClickCounts() {
+        ItemStack item = new ItemStack(Material.valueOf(StaffItemFile.getConfig().getString("CLICK-COUNTS.ITEM").toUpperCase()),
+                1, (short) StaffItemFile.getConfig().getInt("CLICK-COUNTS.DATA"));
+        ItemMeta meta = item.getItemMeta();
+        meta.setDisplayName(CC.translate(StaffItemFile.getConfig().getString("CLICK-COUNTS.NAME")));
+        item.setItemMeta(meta);
+        return item;
+    }
 }

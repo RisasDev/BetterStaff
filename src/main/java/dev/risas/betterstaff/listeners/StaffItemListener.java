@@ -224,4 +224,28 @@ public class StaffItemListener implements Listener {
             }
         }
     }
+
+    @EventHandler
+    public void onClickCounterStaff(PlayerInteractEntityEvent event) {
+        if (BetterStaff.getInstance().getStaffManager().isStaffMode(event.getPlayer())
+                && BetterStaff.getInstance().getStaffManager().isStaff(event.getPlayer())) {
+
+            if (event.getRightClicked() instanceof Player) {
+                Player player = event.getPlayer();
+                Player target = (Player) event.getRightClicked();
+                ItemStack item = player.getInventory().getItemInHand();
+                String version = BetterStaff.getInstance().getServer().getVersion();
+
+                if (version.contains("1.7") || version.contains("1.8")) {
+                    if (StaffItems.getClickCounts().isSimilar(item)) {
+                    }
+                } else {
+                    if (event.getHand().equals(EquipmentSlot.HAND)) {
+                        if (StaffItems.getClickCounts().isSimilar(item)) {
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
