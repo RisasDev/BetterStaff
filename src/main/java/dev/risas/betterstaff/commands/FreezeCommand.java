@@ -11,8 +11,6 @@ import org.bukkit.entity.Player;
 
 public class FreezeCommand implements CommandExecutor {
 
-    private boolean all = false;
-
     public FreezeCommand() {
         BetterStaff.getInstance().getCommand("freeze").setExecutor(this);
     }
